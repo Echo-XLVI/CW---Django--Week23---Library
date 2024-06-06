@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all book </title>
+</head>
+<body>
+    {% for book in books %}
+<fieldset id="first">
+   <a href="{%  url "detail_book" pk=book.id %}">title</a>
+     <input type="text" id="title" name="title" style="width:100%" value="{{ book.title }}" required> <br> <br>
+
+     <label for="To"><b>author</b></label> 
+     <input type="text" id="author" name="author" style="width:100%" value="{{ book.author }}" required><br> <br>
+
+    <label for="Cc"><b>published date</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;
+    <input type="text" id="published_date" name="published_date" style="width:100%"  value="{{ book.published_date }}" required><br> <br>
+
+    <label for="Subject"><b>ISBN</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+    <input type="text" id="ISBN" name="ISBN" style="width:100%" value="{{ book.ISBN }}" required><br> <br>
+
+    <label for="Subject"><b>available </b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+    <input type="text" id="available" name="available" style="width:100%" value="{{ book.available }}" required><br> <br>
+ </fieldset>
+{% endfor %}
+</body>
+</html>
