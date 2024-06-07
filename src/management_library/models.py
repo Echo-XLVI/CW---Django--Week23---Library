@@ -9,8 +9,11 @@ class Book(models.Model):
     ISBN = models.IntegerField()
     available = models.BooleanField()
 
+    def title_author(self):
+        return f"{self.title} by {self.author}"
 
-
+    def __str__(self):
+        return f"{self.title} {self.author}"
 
 class Member(models.Model):
 
@@ -18,9 +21,6 @@ class Member(models.Model):
     last_name = models.CharField(max_length=60)
     email = models.EmailField()
     membership_date = models.DateField()
-
-
-
 
 class Loan(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)

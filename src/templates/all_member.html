@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for member in members %}
+    <fieldset id="first">
+       <a href="{%  url "detail_member" pk=member.id %}">title</a>
+         <input type="text" id="title" name="title" style="width:100%" value="{{ member.first_name }} {{member.last_name}}" required> <br> <br>
+     </fieldset>
+    {% endfor %}
+</body>
+</html>
