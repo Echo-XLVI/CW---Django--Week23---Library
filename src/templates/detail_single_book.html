@@ -6,20 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-    <input type="text" id="title" name="title" style="width:100%" value="{{ books.title }}" required> <br> <br>
+    <form action="" method="post">
+        <label for="author"><b>title</b></label> 
+        <input type="text" id="title" name="title" style="width:100%" value="{{ books.title }}" required> <br> <br>
 
-     <label for="To"><b>author</b></label> 
-     <input type="text" id="author" name="author" style="width:100%" value="{{ books.author }}" required><br> <br>
+        <label for="author"><b>author</b></label> 
+        <input type="text" id="author" name="author" style="width:100%" value="{{ books.author }}" required><br> <br>
 
-    <label for="Cc"><b>published date</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;
-    <input type="text" id="published_date" name="published_date" style="width:100%"  value="{{ books.published_date }}" required><br> <br>
+        <label for="published_date"><b>published date</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;
+        <input type="text" id="published_date" name="published_date" style="width:100%"  value="{{ books.published_date }}" required><br> <br>
 
-    <label for="Subject"><b>ISBN</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
-    <input type="text" id="ISBN" name="ISBN" style="width:100%" value="{{ books.ISBN }}" required><br> <br>
+        <label for="ISBN"><b>ISBN</b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+        <input type="text" id="ISBN" name="ISBN" style="width:100%" value="{{ books.ISBN }}" required><br> <br>
 
-    <label for="Subject"><b>available </b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
-    <input type="text" id="available" name="available" style="width:100%" value="{{ books.available }}" required><br> <br>
+        <label for="available"><b>available </b></label> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+        <input type="text" id="available" name="available" style="width:100%" value="{{ books.available }}" required><br> <br>
     </form> 
 </body>
 </html>
